@@ -1,0 +1,15 @@
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\bin\Debug\net6.0\SheTech.exe
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\bin\Debug\net6.0\SheTech.deps.json
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\bin\Debug\net6.0\SheTech.runtimeconfig.json
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\bin\Debug\net6.0\SheTech.dll
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\bin\Debug\net6.0\SheTech.pdb
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\SheTech.csproj.AssemblyReference.cache
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\SheTech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\SheTech.AssemblyInfoInputs.cache
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\SheTech.AssemblyInfo.cs
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\SheTech.csproj.CoreCompileInputs.cache
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\SheTech.dll
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\refint\SheTech.dll
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\SheTech.pdb
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\SheTech.genruntimeconfig.cache
+C:\Users\Ashlet\source\repos\ucic-shetech\MadLibs\SheTech\obj\Debug\net6.0\ref\SheTech.dll
