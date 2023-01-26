@@ -17,8 +17,10 @@
             {
                 name = Ask("What is your name");
                 friend = Ask("What is a friend's name");
+                they = "she";
+                them = "her"; 
                 nouns = Read_From_Queue("noun", 3); 
-                adjectives = Read_From_Queue("adjective", 4); 
+                adjectives = Read_From_Queue("adjective", 3); 
                 verbs = Read_From_Queue("verb", 3); 
             }
 
@@ -39,6 +41,11 @@
                 }
                 return section_queue;
             }
+
+            public string Tell()
+            {
+                return $"Today {name} is at SheTech {they} hopes to {adjectives.Dequeue()} with {friend}. {nouns.Dequeue()} at today's conference {verbs.Dequeue()} to {nouns.Dequeue()} which is {adjectives.Dequeue()} the best. "; 
+            }
         }
         
 
@@ -46,6 +53,7 @@
         {
             Console.WriteLine("Hello, World!");
             Story story = new Story();
+            Console.WriteLine(story.Tell()); 
         }
     }
 }
