@@ -1,4 +1,6 @@
-﻿namespace MadLibs
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace MadLibs
 {
     internal class RunStory
     {
@@ -42,14 +44,17 @@
                 //adjectives = new Queue<string>(); 
                 //verbs = new Queue<string>();
 
-                name = Ask("What is your name? \t");
-                friend = Ask("What is a friend's name \t");
+                AskQuestions(); 
 
-                they = "she";
-                them = "her";
-                nouns = Read_From_Queue("noun", 3);
-                adjectives = Read_From_Queue("adjective", 3);
-                verbs = Read_From_Queue("verb", 3);
+                //name = Ask("What is your name? \t");
+                //friend = Ask("What is a friend's name \t");
+              
+
+                //they = "she";
+                //them = "her";
+                //nouns = Read_From_Queue("noun", 3);
+                //adjectives = Read_From_Queue("adjective", 3);
+                //verbs = Read_From_Queue("verb", 3);
                 //all_stories = new LinkedList<string>();
                 //all_stories.AddFirst($"Today {name} is at SheTech {they} hopes to {adjectives.Dequeue()} with {friend}. {nouns.Dequeue()} at today's conference {verbs.Dequeue()} to {nouns.Dequeue()} which is {adjectives.Dequeue()} the best. ");
                 //all_stories.Last().
@@ -77,6 +82,10 @@
             {
                 name = Ask("What is your name\t");
                 friend = Ask("What is a friend's name\t");
+                string pronouns = Ask("what are your pronouns? Use she,her format \t");
+                string[] pro = pronouns.Split(",");
+                they = pro[0];
+                them = pro[1]; 
 
                 they = "she";
                 them = "her";
@@ -98,7 +107,7 @@
                     }
                     else if (count % num_of_stories == 1)
                     {
-                        yield return $"Hi {name} and {friend}! We are glad you made it to SheTech this year and stopped by our booth! Don't forget to pick up a {nouns.Dequeue()} while you {verbs.Dequeue()} around today. If you happen to find a {adjectives.Dequeue()} {nouns.Dequeue()} be sure to take a selfie with it. Go have a {adjectives.Dequeue()} day!"; 
+                        yield return $"Hi {name} and {friend}! We are glad you made it to major expo this year and stopped by our booth! Don't forget to pick up a {nouns.Dequeue()} while you {verbs.Dequeue()} around today. If you happen to find a {adjectives.Dequeue()} {nouns.Dequeue()} be sure to take a selfie with it. Go have a {adjectives.Dequeue()} day!"; 
                     }
                     
                 }
