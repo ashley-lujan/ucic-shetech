@@ -62,8 +62,8 @@ namespace MadLibs
             {
                 name = Ask("What is your name\t");
                 friend = Ask("What is a friend's name\t");
-                string pronouns = Ask("what are your pronouns? Use she,her format \t");
-                string[] pro = pronouns.Split(",");
+                string pronouns = Ask("what are your pronouns? Use she/her format \t");
+                string[] pro = pronouns.Split("/");
                 while (pro.Length < 2)
                 {
                     Console.WriteLine("\nOops! Trouble reading, please try again!");
@@ -76,9 +76,9 @@ namespace MadLibs
 
                 they = "she";
                 them = "her";
-                nouns = Read_From_Queue("noun", 3);
-                adjectives = Read_From_Queue("adjective", 3);
-                verbs = Read_From_Queue("verb", 3);
+                nouns = Read_From_Queue("noun", 2);
+                adjectives = Read_From_Queue("adjective", 2);
+                verbs = Read_From_Queue("verb", 2);
             }
 
             private IEnumerable<string> InterchangeStories()
@@ -110,7 +110,7 @@ namespace MadLibs
                 IEnumerable<string> all_stories = InterchangeStories(); 
                 foreach (string story in all_stories)
                 {
-                    Console.WriteLine(story);
+                    Console.WriteLine("\n" + story);
                     //wait 10 seconds? 
                     Thread.Sleep(1000);
                     Console.WriteLine("\n\n\n\n\n\n\n Do our madlib! \n\n\n\n\n"); 
