@@ -62,8 +62,8 @@ namespace MadLibs
             {
                 name = Ask("What is your name\t");
                 friend = Ask("What is a friend's name\t");
-                string pronouns = Ask("what are your pronouns? Use she/her format \t");
-                string[] pro = pronouns.Split("/");
+                string pronouns = Ask("what are your pronouns? Use she,her format \t");
+                string[] pro = pronouns.Split(",");
                 while (pro.Length < 2)
                 {
                     Console.WriteLine("\nOops! Trouble reading, please try again!");
