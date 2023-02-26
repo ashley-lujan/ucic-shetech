@@ -23,6 +23,7 @@ namespace MadLibs
 
         public class Story
         {
+            const string ucic_event = "SheTech"; 
             string name;
             string friend;
             string they;
@@ -36,8 +37,6 @@ namespace MadLibs
             //TODO; change a lot of the things to static and make sure you pass in a string
             public Story()
             {
-                //AskQuestions(); 
-
             }
 
             private string Ask(string question)
@@ -74,8 +73,6 @@ namespace MadLibs
                 they = pro[0];
                 them = pro[1]; 
 
-                they = "she";
-                them = "her";
                 nouns = Read_From_Queue("noun", 2);
                 adjectives = Read_From_Queue("adjective", 2);
                 verbs = Read_From_Queue("verb", 2);
@@ -90,7 +87,47 @@ namespace MadLibs
                 //int count = 1;
                 for (int count = 0; count != -1; count++)
                 {
-                    yield return all_stories[count % size];
+                    string story_to_fill = all_stories[count % size];
+                    string[] story_words = story_to_fill.Split("#");
+                    string full_story = ""; 
+
+                    foreach (string current_word in story_words)
+                    {
+                        switch (current_word)
+                        {
+                            case "NAME": 
+                                full_story += name;
+                                break;
+                            case "FRIEND": 
+                                full_story += friend;
+                                break;
+                            case "THEY":
+                                full_story += they;
+                                break;
+                            case "THEM":
+                                full_story += them;
+                                break;
+                            case "EVENT":
+                                full_story += ucic_event;
+                                break;
+                            case "NOUN":
+                                full_story += nouns.Dequeue(); 
+                                break;
+                            case "ADJECTIVE":
+                                full_story += adjectives.Dequeue();
+                                break;
+                            case "VERB":
+                                full_story += verbs.Dequeue();
+                                break;
+                            default:
+                                full_story += current_word;
+                                break; 
+
+                        }
+                    }
+
+
+                    yield return full_story; 
                 }
             }
 
@@ -98,13 +135,16 @@ namespace MadLibs
             public void  Tell()
             {
                 IEnumerable<string> all_stories = InterchangeStories(); 
+                AskQuestions();
                 foreach (string story in all_stories)
                 {
+                    Console.Write("Producing Story..."); 
+                    Thread.Sleep(1000);
                     Console.WriteLine("\n" + story);
                     //wait 10 seconds? 
                     Thread.Sleep(5000);
-                    Console.WriteLine("\n\n\n\n\n\n\n Do our madlib! \n\n\n\n\n"); 
-                    //AskQuestions(); 
+                    Console.WriteLine("\n\n\n\n\n\n\n Do our madlib! \n\n Answer these questions \n\n\n");
+                    AskQuestions();
                 }
 
             }
