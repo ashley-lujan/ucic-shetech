@@ -1,5 +1,5 @@
-﻿Today NAME is at the EVENT THEY hopes to ADJECTIVE with FRIEND. NOUN at today's conference VERB to NOUN which is ADJECTIVE the best. 
+﻿Today #NAME# is at the #EVENT# #THEY# hopes to #ADJECTIVE# with #FRIEND#. #NOUN# at today's conference #VERB# to #NOUN# which is #ADJECTIVE# the best. 
 ***
-Hi NAME and FRIEND! We are glad you made it to EVENT this year and stopped by our booth! Don't forget to pick up a NOUN while you VERB around today. If you happen to find a ADJECTIVE NOUN be sure to take a selfie with it. Go have a ADJECTIVE day!;
+Hi #NAME# and #FRIEND#! We are glad you made it to #EVENT# this year and stopped by our booth! Don't forget to pick up a #NOUN# while you #VERB# around today. If you happen to find a #ADJECTIVE# #NOUN# be sure to take a selfie with it. Go have a #ADJECTIVE# day!;
 ***
-Yesterday, NAME went to the store with FRIEND! They bought a ADJECTIVE NOUN and forgot they had to go VERB with their ADJECTIVE NOUN.
+Yesterday, #NAME# went to the store with #FRIEND#! #THEY# bought a #ADJECTIVE# #NOUN# and forgot #THEY# had to go #VERB# with their #ADJECTIVE# #NOUN#.
