@@ -36,7 +36,7 @@ namespace MadLibs
             //TODO; change a lot of the things to static and make sure you pass in a string
             public Story()
             {
-                AskQuestions(); 
+                //AskQuestions(); 
 
             }
 
@@ -83,26 +83,14 @@ namespace MadLibs
 
             private IEnumerable<string> InterchangeStories()
             {
-
-                List<string> all_stories = new(); 
+                string text_file_all = File.ReadAllText("../../../all_stories.txt");
+                string[] all_stories = text_file_all.Split("***");
+                int size = all_stories.Length; 
 
                 //int count = 1;
-                int num_of_stories = 3;
                 for (int count = 0; count != -1; count++)
                 {
-                    if(count % num_of_stories == 0)
-                    {
-                        yield return $"Today {name} is at the major expo {they} hopes to {adjectives.Dequeue()} with {friend}. {nouns.Dequeue()} at today's conference {verbs.Dequeue()} to {nouns.Dequeue()} which is {adjectives.Dequeue()} the best. "; 
-                    }
-                    else if (count % num_of_stories == 1)
-                    {
-                        yield return $"Hi {name} and {friend}! We are glad you made it to major expo this year and stopped by our booth! Don't forget to pick up a {nouns.Dequeue()} while you {verbs.Dequeue()} around today. If you happen to find a {adjectives.Dequeue()} {nouns.Dequeue()} be sure to take a selfie with it. Go have a {adjectives.Dequeue()} day!"; 
-                    }
-                    else if (count % num_of_stories == 2)
-                    {
-                        yield return $"Yesterday, {name} went to the store with {friend}! They bought a {adjectives.Dequeue()} {nouns.Dequeue()} and forgot they had to go {verbs.Dequeue()} with their {adjectives.Dequeue()} {nouns.Dequeue()}.";
-                    }
-
+                    yield return all_stories[count % size];
                 }
             }
 
@@ -114,9 +102,9 @@ namespace MadLibs
                 {
                     Console.WriteLine("\n" + story);
                     //wait 10 seconds? 
-                    Thread.Sleep(1000);
+                    Thread.Sleep(5000);
                     Console.WriteLine("\n\n\n\n\n\n\n Do our madlib! \n\n\n\n\n"); 
-                    AskQuestions(); 
+                    //AskQuestions(); 
                 }
 
             }
@@ -125,10 +113,8 @@ namespace MadLibs
 
         static void Main(string[] args)
         {
-            string file_text = File.ReadAllText("../../../all_stories.txt");
-            Console.WriteLine(file_text);
-            //Story story = new Story(); 
-            //story.Tell();
+            Story story = new Story();
+            story.Tell();
         }
     }
 }
