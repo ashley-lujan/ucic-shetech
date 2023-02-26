@@ -63,12 +63,12 @@ namespace MadLibs
                 name = Ask("What is your name\t");
                 friend = Ask("What is a friend's name\t");
                 string pronouns = Ask("what are your pronouns? Use she,her format \t");
-                string[] pro = pronouns.Split(",");
+                string[] pro = pronouns.Split(',');
                 while (pro.Length < 2)
                 {
                     Console.WriteLine("\nOops! Trouble reading, please try again!");
                     pronouns = Ask("what are your pronouns? Use she,her format \t");
-                    pro = pronouns.Split(",");
+                    pro = pronouns.Split(',');
                 }
 
                 they = pro[0];
@@ -83,7 +83,9 @@ namespace MadLibs
 
             private IEnumerable<string> InterchangeStories()
             {
-                
+
+                List<string> all_stories = new(); 
+
                 //int count = 1;
                 int num_of_stories = 3;
                 for (int count = 0; count != -1; count++)
@@ -123,8 +125,10 @@ namespace MadLibs
 
         static void Main(string[] args)
         {
-            Story story = new Story(); 
-            story.Tell();
+            string file_text = File.ReadAllText("../../../all_stories.txt");
+            Console.WriteLine(file_text);
+            //Story story = new Story(); 
+            //story.Tell();
         }
     }
 }

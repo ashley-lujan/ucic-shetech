@@ -1,0 +1,5 @@
+﻿Today {name} is at the major expo {they} hopes to {adjectives.Dequeue()} with {friend}. {nouns.Dequeue()} at today's conference {verbs.Dequeue()} to {nouns.Dequeue()} which is {adjectives.Dequeue()} the best. 
+***
+Hi {name} and {friend}! We are glad you made it to major expo this year and stopped by our booth! Don't forget to pick up a {nouns.Dequeue()} while you {verbs.Dequeue()} around today. If you happen to find a {adjectives.Dequeue()} {nouns.Dequeue()} be sure to take a selfie with it. Go have a {adjectives.Dequeue()} day!;
+***
+Yesterday, {name} went to the store with {friend}! They bought a {adjectives.Dequeue()} {nouns.Dequeue()} and forgot they had to go {verbs.Dequeue()} with their {adjectives.Dequeue()} {nouns.Dequeue()}.
