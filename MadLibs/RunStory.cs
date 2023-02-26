@@ -45,6 +45,7 @@ namespace MadLibs
                 return Console.ReadLine();
             }
 
+
             private Queue<string> Read_From_Queue(string section, int quantities)
             {
                 Queue<string> section_queue = new Queue<string>();
@@ -77,7 +78,6 @@ namespace MadLibs
                 adjectives = Read_From_Queue("adjective", 2);
                 verbs = Read_From_Queue("verb", 2);
             }
-
             private IEnumerable<string> InterchangeStories()
             {
                 string text_file_all = File.ReadAllText("../../../all_stories.txt");
@@ -138,7 +138,7 @@ namespace MadLibs
                 AskQuestions();
                 foreach (string story in all_stories)
                 {
-                    Console.Write("Producing Story..."); 
+                    Console.Write("Producing Story...");
                     Thread.Sleep(1000);
                     Console.WriteLine("\n" + story);
                     //wait 10 seconds? 
@@ -148,6 +148,7 @@ namespace MadLibs
                 }
 
             }
+
         }
 
 
